@@ -1,0 +1,90 @@
+.banner
+	margin-top: -32px
+	color: #000
+	&__carousel
+		max-width: calc(1198px + 12%)
+		margin: 0 auto
+	&__slide
+		position: relative
+		background-repeat: no-repeat
+		background-position: 50%
+		background-size: cover
+		overflow: hidden
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			left: 0
+			bottom: 0
+			background-color: rgba(#000, 0.2)
+	&__inner
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: space-between
+		height: 500px
+		padding-top: 64px
+		padding-bottom: 32px
+		z-index: 1
+	&__composition
+		position: relative
+		padding: 16px
+		padding-left: 0
+		max-width: 40%
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			width: 1000px
+			background-color: rgba($yellow, 0.5)
+	&__title
+		position: relative
+		font-family: $mainfamily
+		font-size: 48px
+		font-weight: 400
+		line-height: 1
+		margin-bottom: 8px
+		z-index: 1
+	&__subtitle
+		position: relative
+		font-family: $mainfamily
+		font-size: 24px
+		font-weight: 500
+		line-height: 1.22
+		margin-bottom: 0
+		color: #000
+		z-index: 1
+	&__link
+		position: relative
+		display: inline-block
+		margin-top: 32px
+		color: $blue
+		font-size: 14px
+		border-bottom: 1px solid $blue
+		text-transform: uppercase
+		z-index: 1
+		transition: 0.3s
+		&:hover
+			color: $blue
+			opacity: 0.7
+	&__nav
+		font-size: 0
+	&__prev, &__next
+		font-size: 16px
+		text-transform: uppercase
+		color: $accent
+		transition: 0.3s
+		&:hover
+			color: $accent
+			opacity: 0.7
+	&__prev
+		padding-right: 16px
+		border-right: 1px solid $accent
+	&__next
+		padding-left: 16px

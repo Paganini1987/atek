@@ -35,7 +35,7 @@ function styles() {
 	.pipe(eval(preprocessor)())
 	.pipe(concat('app.min.css'))
 	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
+	// .pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
 	.pipe(dest('app/css'))
 	.pipe(browserSync.stream())
 }
@@ -45,6 +45,7 @@ function styles() {
 function scripts() {
 	return src([
 		'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
+		'app/js/libs/OwlCarousel/owl.carousel.min.js',
 		'app/js/app.js' // app.js. Always at the end
 		])
 	.pipe(concat('app.min.js'))

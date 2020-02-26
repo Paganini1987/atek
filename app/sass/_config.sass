@@ -3,22 +3,9 @@
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+@import '../js/libs/OwlCarousel/owl.carousel.min.css'
+@import '../js/libs/OwlCarousel/owl.theme.default.min.css'
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
-
-
-// USER VARIABLES SECTION
-
-$accent:     orange // Accent Color
-$fontsize:   16px // Body Font Size
-$textcolor:  #000 // Text Color
-$mainfamily: roboto, sans-serif // Main Font Family
-
-// Bootstrap compatible gutter variable => $gutter
-
-$grid-gutter-width: 20px
-$gutter: $grid-gutter-width
-
-$container-max-widths: (sm: 767px, md: 1000px, lg: 1198px)!default
 
 // FONTS LOAD SECTION
 
@@ -30,11 +17,14 @@ $container-max-widths: (sm: 767px, md: 1000px, lg: 1198px)!default
 		src: url($f-url) format('woff2')
 
 
-@include font('roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-@include font('roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
-@include font('roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
-@include font('roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('nunito', normal, 300, '../fonts/nunito-v12-latin_cyrillic-300.woff2')
+@include font('nunito', normal, 400, '../fonts/nunito-v12-latin_cyrillic-regular.woff2')
+@include font('nunito', normal, 500, '../fonts/nunito-v12-latin_cyrillic-600.woff2')
 
+@include font('opensans', normal, 400, '../fonts/open-sans-v17-latin_cyrillic-regular.woff2')
+@include font('opensans', normal, 500, '../fonts/open-sans-v17-latin_cyrillic-600.woff2')
+
+@include font('ubuntu', italic, 500, '../fonts/ubuntu-v14-cyrillic-700italic.woff2')
 
 
 // Mixins
@@ -61,7 +51,7 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.65
-	font-family: $mainfamily
+	font-family: $textfamily
 	overflow-x: hidden
 	color: $textcolor
 
