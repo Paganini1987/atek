@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 	//Слайдер на главной
-	$('.js-carousel').owlCarousel({
+	$('.js-main-carousel').owlCarousel({
 		items: 1,
 		loop: true,
 		smartSpeed: 500,
@@ -12,11 +12,23 @@ document.addEventListener("DOMContentLoaded", function() {
 	$('.js-prev-slide').on('click', function(e) {
 		e.preventDefault()
 
-		$('.js-carousel').trigger('prev.owl.carousel')
+		$('.js-main-carousel').trigger('prev.owl.carousel')
 	})
 	$('.js-next-slide').on('click', function(e) {
 		e.preventDefault()
 
-		$('.js-carousel').trigger('next.owl.carousel')
+		$('.js-main-carousel').trigger('next.owl.carousel')
+	})
+
+	//Слайдер акции
+	$('.js-sale-carousel').owlCarousel({
+		items: 5,
+		smartSpeed: 500,
+		loop: true,
+		autoplay: true,
+		autoplayHoverPause: true,
+		autoWidth: true,
+		dots: false,
+		nav: false
 	})
 });

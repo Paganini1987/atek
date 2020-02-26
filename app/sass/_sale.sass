@@ -1,0 +1,56 @@
+.sale
+	&__carousel
+		width: 100%
+	&__item
+		display: block
+		position: relative
+		width: calc(100vw/5 + 2vw)
+		padding-top: 100%
+		overflow: hidden
+		img
+			display: block
+			position: absolute
+			top: -10%
+			left: -10%
+			width: 120%!important
+			height: 120%
+			object-fit: cover
+			transition: transform 0.3s, filter 0.3s
+		&:hover
+			img, .sale__description
+				filter: blur(3px)
+			img
+				transform: scale(0.9)
+			.sale__overlay
+				opacity: 1
+	&__description
+		position: absolute
+		top: 0
+		left: 0
+		max-width: 80%
+		z-index: 1
+		padding: 16px
+		background-color: $yellow
+		transition: filter 0.3s
+	&__name
+		position: relative
+		line-height: 1.2
+		margin-bottom: 0
+	&__date
+		position: relative
+	&__overlay
+		position: absolute
+		display: flex
+		align-items: center
+		justify-content: center
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-color: rgba(#000, 0.3)
+		opacity: 0
+		font-family: $mainfamily
+		font-size: 32px
+		font-weight: 300
+		color: #fff
+		transition: opacity 0.3s
