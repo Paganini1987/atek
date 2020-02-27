@@ -54,6 +54,10 @@
 
 .f-sale
 	display: flex
+	&:hover
+		.f-sale__more
+			color: $accent
+			border-color: $accent
 	&__img
 		position: relative
 		width: 80px
@@ -87,6 +91,4 @@
 		line-height: 1
 		border-bottom: 1px solid #000
 		transition: 0.3s
-		&:hover
-			color: $accent
-			border-color: $accent
+			

@@ -1,0 +1,49 @@
+.shops
+	&__item
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: flex-start
+		height: 100%
+	&__slide
+		position: relative
+		padding-top: 50%
+		img
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.owl-dots
+		position: absolute
+		display: flex
+		justify-content: center
+		left: 0
+		width: 100%
+		bottom: -5px
+	.owl-dot
+		width: 100%
+		height: 5px
+		background-color: rgba($accent, 0.3)!important
+		outline: none
+		transition: 0.3s
+		&.active, &:hover
+			background-color: $accent!important
+	&__description
+		flex-grow: 1
+		margin-bottom: 32px
+	&__name
+		font-size: 24px
+		line-height: 1.2
+		margin-top: 16px
+	&__contacts
+
+	&__map
+		display: inline-block
+		line-height: 1
+		margin-top: auto
+		border-bottom: 1px solid #000
+		&:hover
+			border-color: $accent
